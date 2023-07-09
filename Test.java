@@ -11,5 +11,8 @@ public class Test {
         //Part B
         System.out.println("URL: " + m1.getUrl());
         System.out.println("Webpage Name: " + m1.getName());
+        
+        //PART C
+        System.out.println("Number of CSS links: " + m1.getNumberOfCSSLinks());
     }
 }

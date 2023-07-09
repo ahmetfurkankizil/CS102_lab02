@@ -2,8 +2,14 @@ package CS102_lab02;
 
 public class Test {
     public static void main(String[] args) {
-        SimpleURLReader s1 = new SimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/housman.txt");
-        System.out.println(s1.getPageContents());
-        System.out.println(s1.getLineCount());
+
+        //Part A
+        MySimpleURLReader m1 = new MySimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/scrapethissite.html");
+        System.out.println(m1.getPageContents());
+        System.out.println(m1.getLineCount());
+
+        //Part B
+        System.out.println("URL: " + m1.getUrl());
+        System.out.println("Webpage Name: " + m1.getName());
     }
 }

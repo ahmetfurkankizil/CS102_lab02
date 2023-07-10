@@ -27,7 +27,7 @@ public class MySimpleURLReader extends SimpleURLReader{
     public int getNumberOfCSSLinks(){
 
         int lastIndex = 0;
-        String s = super.pageContents;
+        String s = super.getPageContents();
         int count = 0;
 
         while (lastIndex != -1) {
@@ -48,6 +48,11 @@ public class MySimpleURLReader extends SimpleURLReader{
         return count;
     }
 
-
+    public String getPageContents(){
+        return super.getPageContents();
+    }
 
 }
+
+
+

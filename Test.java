@@ -3,8 +3,9 @@ package CS102_lab02;
 public class Test {
     public static void main(String[] args) {
 
+         
         //Part A
-        MySimpleURLReader m1 = new MySimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/scrapethissite.html");
+        MySimpleURLReader m1 = new MySimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/housman.txt");
         System.out.println(m1.getPageContents());
         System.out.println("The Line Number: " + m1.getLineCount());
 
@@ -14,7 +15,7 @@ public class Test {
 
         //PART C
         System.out.println("Number of CSS links: " + m1.getNumberOfCSSLinks());
-
+        
         //PART D
         HTMLFilteredReader h1 = new HTMLFilteredReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/scrapethissite.html");
         System.out.println(h1.getPageContents());
@@ -23,6 +24,8 @@ public class Test {
         wordSearch w1 = new wordSearch("http://www.cs.bilkent.edu.tr/~ozturk/cs102/scrapethissite.html");
         System.out.println(w1.getPageContents("Ankara"));
 
-
+        //Extension
+        MySimpleURLReader m2 = new MySimpleURLReader("http://www.cs.bilkent.edu.tr/~ozturk/cs102/housman.txt");
+        m2.extensionMethod();
     }
 }

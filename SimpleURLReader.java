@@ -4,6 +4,8 @@ package CS102_lab02;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class SimpleURLReader {
    public static final String version = "SimpleURLReader:v1.0:03/03/2002";
@@ -33,4 +35,48 @@ public class SimpleURLReader {
    public int getLineCount() {
       return this.lineCount;
    }
+
+   public void extensionMethod(){
+        
+        //Adding words to an arraylist
+        String s = pageContents;
+        ArrayList <String> words = new ArrayList<>();
+        Scanner scanner = new Scanner(s);
+        while (scanner.hasNextLine()) {
+            String theLineScanned = scanner.nextLine();
+            int indexOfSpace = theLineScanned.indexOf(" ", 0);
+            while (indexOfSpace != -1) {
+                indexOfSpace = theLineScanned.indexOf(" ", 0);
+                if (indexOfSpace != -1) {
+                    String tempWord;
+                    tempWord = theLineScanned.substring(0,indexOfSpace+1);
+                    
+                    if (!words.contains(String.valueOf(words))) {
+                        words.add(tempWord.replaceAll(" ", ""));
+                    }  
+                    theLineScanned = theLineScanned.replace(tempWord, "");
+                }   
+            }
+            if (!words.contains(String.valueOf(words))) {
+                words.add(theLineScanned.replaceAll(" ", ""));
+            }
+        }
+        words.remove(10);
+
+        String str = pageContents;
+        int count;
+        for (int i = 0; i < words.size(); i++) {
+            count = 0;
+            String holdingWord = words.get(i);
+            if (str.contains(holdingWord)) {
+               while (str.contains(holdingWord)) {
+                  if (str.contains(holdingWord)) {
+                     count++;
+                     str = str.replaceFirst(holdingWord, "");
+                  }
+               }
+               System.out.println("Word " + holdingWord + " occurs " + count + " times.");
+            }
+        }
+    }
 }

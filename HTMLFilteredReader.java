@@ -1,5 +1,6 @@
 package CS102_lab02;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class HTMLFilteredReader extends MySimpleURLReader{
